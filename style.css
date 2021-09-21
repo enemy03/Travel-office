@@ -1,0 +1,1358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 10px;
+
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    background-image: url(img/alps-mountains_800.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .5s linear;
+}
+
+
+
+.logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #CBCBCB;
+    width: 150px;
+    height: 80px;
+
+}
+
+.logo i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 3.5rem;
+
+
+}
+
+.logo p {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo .break {
+    position: absolute;
+    top: 26px;
+    left: 22px;
+    display: block;
+    text-align: center;
+}
+
+
+.burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3rem;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+aside.menu {
+    position: absolute;
+    left: -70%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #ECECEC;
+    z-index: 1;
+    transition: .3s linear;
+}
+
+aside.menu.active {
+    left: 0;
+}
+
+nav li {
+    list-style: none;
+    width: 100%;
+    padding: 20px 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    padding: 5px;
+    transition: .3s linear;
+    cursor: pointer;
+
+}
+
+.description {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px 20px;
+    animation: text 4s infinite linear;
+
+}
+
+@keyframes text {
+    0% {
+        opacity: 0
+    }
+
+    8% {
+        opacity: 0;
+    }
+
+    13% {
+        opacity: 1;
+    }
+
+    87% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+.description p {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+
+
+}
+
+.description h1 {
+    font-size: 2.7rem;
+    text-transform: uppercase;
+
+}
+
+@media (min-width:760px) {
+    header {
+        height: 70vh;
+        background-image: url(img/alps-mountains_1600.jpg);
+    }
+
+    .wrap_flex {
+
+        position: relative;
+        display: flex;
+    }
+
+    .logo {
+        position: static;
+        display: block;
+    }
+
+    .logo i {
+        display: block;
+        font-size: 3.5rem;
+    }
+
+    .logo p {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .logo .break {
+        display: block;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    aside.menu {
+        position: static;
+        flex-grow: 1;
+        background-color: transparent;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        flex-grow: 1;
+    }
+
+    li.icon {
+        color: white;
+        flex-basis: 30px;
+        font-size: 1.7rem;
+    }
+
+    nav li a {
+        color: white;
+        font-size: 1.7rem;
+        text-transform: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .description {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 40px 40px;
+    }
+
+    .description p {
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+    }
+
+    .description h1 {
+        font-size: 3rem;
+    }
+
+}
+
+@media (min-width:1025px) {
+    header {
+        height: 100vh;
+    }
+
+    .wrap_flex {
+        display: flex;
+        max-width: 1025px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        position: relative;
+        flex-basis: 250px;
+
+    }
+
+    .logo i {
+        position: absolute;
+        top: 23px;
+        left: 0;
+        display: block;
+        font-size: 4rem;
+        padding-right: 10px;
+    }
+
+    .logo p {
+        position: absolute;
+        top: 15px;
+        left: 53px;
+        display: block;
+        font-size: 2.5rem;
+    }
+
+    nav li {
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    nav li.bg:hover {
+        background-color: #4FC3F7;
+    }
+
+    nav li a {
+        font-size: 2.3rem;
+    }
+
+    li.icon {
+        font-size: 2rem;
+        transition: .3s;
+    }
+
+    li.icon:hover {
+        color: #4FC3F7
+    }
+
+    .description {
+        width: 100%;
+        padding: 50px 50px;
+        max-width: 1025px;
+    }
+
+    .description p {
+        font-size: 3rem;
+        padding-bottom: 15px;
+    }
+
+    .description h1 {
+        font-size: 4.5rem;
+
+    }
+
+
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1025px;
+    margin: 0 auto;
+}
+
+.welcome h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 30px 0 10px 0;
+    color: grey;
+}
+
+.welcome h1 {
+    text-align: center;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+}
+
+.welcome p {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 30px 20px;
+    line-height: 35px;
+    color: grey;
+}
+
+button {
+    font-size: 1.6rem;
+    width: 200px;
+    text-align: center;
+    border: none;
+    background-color: #4FC3F7;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+@media (min-width:360px) {
+    .welcome p {
+        font-size: 1.4rem;
+        padding: 30px 30px;
+        line-height: 38px;
+    }
+
+    button {
+        font-size: 1.7rem;
+        width: 210px;
+    }
+}
+
+@media (min-width:410px) {
+
+    .welcome h1 {
+        font-size: 2.9rem;
+    }
+
+    .welcome p {
+        font-size: 1.5rem;
+        padding: 30px 40px;
+        line-height: 45px;
+        padding-bottom: 40px;
+    }
+
+    button {
+        font-size: 1.8rem;
+        width: 230px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width:768px) {
+    .welcome {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .welcome h2 {
+        flex-basis: 100%;
+        font-size: 2.5rem;
+        padding: 30px 0 20px 0;
+    }
+
+    .welcome h1 {
+        font-size: 5rem;
+    }
+
+    .welcome p {
+        font-size: 1.9rem;
+        padding: 30px 30px;
+        line-height: 50px;
+    }
+
+    button {
+        font-size: 2.4rem;
+        width: 250px;
+        margin-right: 30px;
+        padding: 20px 20px;
+    }
+}
+
+@media (min-width:1025px) {
+    .welcome h1 {
+        letter-spacing: 10px;
+    }
+
+    button:hover {
+        background-color: black;
+    }
+}
+
+
+.fonts {
+
+    background-image: url(/img/mountains_fonst.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0;
+}
+
+.wrap_fonts {
+    max-width: 1025px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.fonts i {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    border: 4px solid white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    line-height: 80px;
+    margin: 20px 0;
+}
+
+.fonts p {
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+p.number {
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.font1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+.font2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+.font3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+.font4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+@media (min-width:768px) {
+    .wrap_fonts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 150px 0;
+
+    }
+
+    .fonts i {
+        font-size: 2.8rem;
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+
+    }
+
+    .fonts p {
+        font-size: 2rem;
+    }
+
+    p.number {
+        font-size: 3.8rem;
+    }
+
+    .font {
+        margin: 0;
+    }
+}
+
+@media (min-width:1025px) {
+    .wrap_fonts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 150px 0;
+
+    }
+
+    .fonts i {
+        font-size: 3rem;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        border: 5px solid white;
+    }
+
+    .fonts p {
+        font-size: 2.3rem;
+    }
+
+    p.number {
+        font-size: 6rem;
+        letter-spacing: 7px;
+    }
+
+    .font {
+        margin: 0;
+    }
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1025px;
+    margin: 0 auto;
+}
+
+.articles h2 {
+    font-size: 2rem;
+    color: grey;
+    font-weight: normal;
+    padding-top: 30px;
+}
+
+.articles h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 10px 0 30px 0;
+}
+
+.articles article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articles div {
+    width: 90%;
+    transform: scale(0);
+    transition: .5s;
+
+}
+
+.articles div.active {
+    transform: scale(1);
+}
+
+.articles div img {
+    width: 100%;
+}
+
+.articles article p {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px 10px;
+    line-height: 30px;
+    color: grey;
+}
+
+.articles article span {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+@media (min-width:768px) {
+    .articles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .articles h2 {
+        flex-basis: 100%;
+        font-size: 3rem;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .articles h1 {
+        flex-basis: 100%;
+        font-size: 4rem;
+        padding: 10px 0 50px 0;
+        text-align: center;
+    }
+
+    .articles article {
+        flex-basis: 33%;
+    }
+
+    .articles div {
+        width: 95%;
+        transform: scale(0);
+        transition: .5s;
+
+    }
+
+    .articles article p {
+        font-size: 1.8rem;
+        line-height: 36px;
+    }
+
+    .articles article span {
+        font-size: 2rem;
+    }
+
+}
+
+@media (min-width:1025px) {
+    .articles h2 {
+        font-size: 3rem;
+    }
+
+    .articles h1 {
+        font-size: 5rem;
+        letter-spacing: 10px;
+    }
+
+    .articles article p {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    .articles article span {
+        font-size: 2.3rem;
+    }
+
+}
+
+.video {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .video {
+        height: 50vh;
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
+@media(min-width:1025px) {
+    .video {
+        height: 65vh;
+    }
+}
+
+
+
+.gallery {
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1025px;
+    margin: 0 auto;
+}
+
+.gallery h2 {
+    flex-basis: 100%;
+    text-align: center;
+    color: grey;
+    font-size: 1.5rem;
+    font-weight: normal;
+
+}
+
+.gallery h1 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    padding: 20px 0 30px 0;
+}
+
+.gallery article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 45%;
+}
+
+.gallery div {
+    width: 100%;
+}
+
+.gallery div img {
+    width: 100%;
+
+}
+
+.gallery article h3 {
+    padding: 10px 0;
+}
+
+.gallery article h3 a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+
+}
+
+.gallery article p {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: grey;
+    border-left: 3px solid #4FC3F7;
+    padding: 0 10px;
+}
+
+.gallery article span {
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: #4FC3F7;
+    color: white;
+    font-size: 1.9rem;
+}
+
+.gallery article span i {
+    padding-right: 7px;
+}
+
+.move {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+.gallery .article_3 {
+    display: none;
+}
+
+.gallery .article_4 {
+    display: none;
+}
+
+.gallery .article_5 {
+    display: none;
+}
+
+.gallery .article_6 {
+    display: none;
+}
+
+
+@media (min-width:360px) {
+
+    .gallery h2 {
+        flex-basis: 100%;
+        text-align: center;
+        color: grey;
+        font-size: 1.7rem;
+        font-weight: normal;
+
+    }
+
+    .gallery h1 {
+        font-size: 3rem;
+    }
+
+    .gallery article {
+        flex-basis: 45%;
+    }
+
+    .gallery article h3 {
+        padding: 20px 0;
+    }
+
+    .gallery article h3 a {
+        font-size: 1.5rem;
+    }
+
+    .gallery article p {
+        font-size: 1.3rem;
+        line-height: 35px;
+        padding: 0 15px;
+    }
+
+    .gallery article span {
+        margin: 20px 0;
+    }
+
+    .gallery article span i {
+        padding-right: 7px;
+    }
+
+}
+
+@media (min-width:768px) {
+
+    .gallery h2 {
+        font-size: 2rem;
+    }
+
+    .gallery h1 {
+        font-size: 3.5rem;
+    }
+
+    .gallery article {
+        flex-basis: 30%;
+    }
+
+    .gallery article h3 {
+        padding: 20px 0;
+    }
+
+    .gallery article h3 a {
+        font-size: 2rem;
+    }
+
+    .gallery article p {
+        font-size: 1.8rem;
+        line-height: 45px;
+        padding: 10px 15px;
+        border-left: 4px solid #4FC3F7;
+    }
+
+    .gallery article span {
+        margin: 20px 0;
+        padding: 15px 20px;
+        font-size: 2.5rem;
+    }
+
+    .gallery article span i {
+        padding-right: 8px;
+    }
+
+    .gallery .article_4 {
+        display: flex;
+    }
+
+    .move {
+        margin: 30px 0;
+        font-size: 3rem;
+        letter-spacing: 7px;
+    }
+
+}
+
+@media (min-width:1025px) {
+    .gallery h2 {
+        font-size: 2.3rem;
+    }
+
+    .gallery h1 {
+        font-size: 4rem;
+        letter-spacing: 8px;
+    }
+
+    .gallery article {
+        flex-basis: 24%;
+    }
+
+    .gallery article h3 {
+        padding: 20px 0;
+    }
+
+    .gallery article h3 a {
+        font-size: 2.3rem;
+    }
+
+    .gallery article p {
+        font-size: 1.6rem;
+        line-height: 45px;
+        padding: 10px 15px;
+        border-left: 5px solid #4FC3F7;
+    }
+
+    .gallery article span {
+        margin: 30px 0;
+        padding: 20px 30px;
+        font-size: 3rem;
+
+    }
+
+    .gallery article span i {
+        padding-right: 15px;
+    }
+
+    .gallery .article_4 {
+        display: flex;
+    }
+
+    .gallery .article_5 {
+        display: flex;
+    }
+
+    .move {
+        margin: 20px 0;
+        font-size: 3rem;
+        letter-spacing: 7px;
+    }
+
+}
+
+.newsletter {
+    background-color: #4FC3F7;
+    height: 250px;
+}
+
+.wrap_news {
+    max-width: 1025px;
+    margin: 0 auto;
+}
+
+.newsletter h1 {
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 20px 10px;
+}
+
+.newsletter input {
+    background-color: #81D4FA;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 0px 15px 10px;
+    width: 90%;
+    color: white;
+}
+
+
+.newsletter ::-webkit-input-placeholder {
+    color: white;
+}
+
+.newsletter button {
+    background-color: black;
+    color: white;
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+@media (min-width:360px) {
+    .newsletter h1 {
+        padding: 30px 10px;
+    }
+
+    .newsletter input {
+        margin: 0 0px 20px 10px;
+    }
+
+
+    .newsletter ::-webkit-input-placeholder {
+        color: white;
+    }
+
+    .newsletter button {
+        margin-top: 15px;
+    }
+}
+
+@media(min-width:768px) {
+    .wrap_news {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+    .newsletter h1 {
+        font-size: 4rem;
+        padding: 40px 0px 20px 20px;
+        flex-basis: 100%;
+    }
+
+    .newsletter input {
+        padding: 0px 20px;
+        margin: 0 0 15px 10px;
+        flex-basis: 45%;
+        height: 48px;
+    }
+
+    .newsletter button {
+        font-size: 2rem;
+        flex-basis: 45%;
+        margin-left: 10px;
+        margin-top: 0;
+        padding: 10px 20px;
+        height: 48px;
+    }
+}
+
+@media (min-width:1025px) {
+    .wrap_news {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        height: 150px;
+    }
+
+    .newsletter {
+        background-color: #4FC3F7;
+        height: 150px;
+    }
+
+    .newsletter h1 {
+        font-size: 5.5rem;
+        padding: 40px 0px 20px 20px;
+        flex-basis: 40%;
+        letter-spacing: 2px;
+    }
+
+    .newsletter input {
+        flex-grow: 2;
+        padding: 0px 20px;
+        margin: 50px 0 15px 10px;
+        flex-basis: 35%;
+        height: 48px;
+    }
+
+    .newsletter button {
+        flex-grow: 1;
+        font-size: 2rem;
+        flex-basis: 25%;
+        margin-left: 10px;
+        margin-top: 50px;
+        padding: 10px 20px;
+        height: 48px;
+        transition: .3s;
+    }
+
+    .newsletter button:hover {
+        background-color: #81D4FA;
+    }
+}
+
+.form {
+    background-image: url(/img/mountain_footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form .info {
+    display: flex;
+    padding: 10px 0;
+}
+
+.info i {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 20px 10px;
+    padding: 10px 15px 10px 10px;
+    border-right: 3px solid rgba(255, 255, 255, 0.5);
+    ;
+}
+
+.info .contact {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 20px 10px;
+}
+
+.info .place {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 20px 10px;
+}
+
+.info .email {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 20px 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form input {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 10px 0;
+    padding: 15px 20px;
+    width: 90%;
+}
+
+.form textarea {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 90%;
+
+}
+
+.form ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.8)
+}
+
+input.button {
+    background-color: #4FC3F7;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer .socials {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    color: white;
+    padding: 10px 0;
+}
+
+.socials .social {
+    font-size: 2.8rem;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    flex-basis: 100%;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (min-width:360px) {
+    .info i {
+        font-size: 2.3rem;
+    }
+
+    .info .contact {
+        font-size: 1.7rem;
+    }
+
+    .info .place {
+        font-size: 1.7rem;
+        ;
+    }
+
+    .info .email {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width:768px) {
+    .container_form {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+    }
+
+    .form .inforamtion {
+        flex-basis: 50%;
+    }
+
+    .form .info {
+        display: flex;
+        padding: 10px 0;
+    }
+
+    .info i {
+        font-size: 3rem;
+        padding: 10px 20px 10px 10px;
+        border-right: 5px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .info .contact {
+        font-size: 2rem;
+    }
+
+    .info .place {
+        font-size: 2rem;
+    }
+
+    .info .email {
+        font-size: 2rem;
+    }
+
+    form {
+        display: flex;
+        flex-basis: 50%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .form input.left {
+        width: 43%;
+        margin-right: 4%;
+    }
+
+    input.button {
+        font-size: 1.7rem;
+    }
+
+    footer {
+        flex-basis: 100%;
+        padding: 30px 0;
+        margin-top: 30px;
+    }
+
+    .socials .social {
+        font-size: 4rem;
+        padding: 10px 25px;
+    }
+
+    footer p {
+        font-size: 2.5rem;
+    }
+}
+
+@media(min-width:1025px) {
+    .container_form {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        max-width: 1025px;
+        margin: 0 auto;
+    }
+
+    .form .inforamtion {
+        flex-basis: 35%;
+    }
+
+    .info i {
+        font-size: 3.5rem;
+    }
+
+    .info .contact {
+        font-size: 2.5rem;
+    }
+
+    .info .place {
+        font-size: 2.5rem;
+    }
+
+    .info .email {
+        font-size: 2.5rem;
+    }
+
+    .form input {
+        padding: 20px 20px;
+    }
+
+    input.button {
+        background-color: #4FC3F7;
+        transition: .3s;
+    }
+
+    input.button:hover {
+        background-color: black;
+    }
+
+    .socials .social {
+        font-size: 4.5rem;
+        padding: 10px 25px;
+    }
+
+    .social i {
+        transition: .3s;
+    }
+
+    .social i:hover {
+        color: #4FC3F7;
+    }
+
+    footer p {
+        font-size: 2.4rem;
+    }
+
+
+}
